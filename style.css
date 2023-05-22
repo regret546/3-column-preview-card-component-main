@@ -1,3 +1,25 @@
+:root {
+  /* Primary Color */
+  --clr--bright-orange: hsl(31, 77%, 52%);
+  --clr--dark-cyan: hsl(184, 100%, 22%);
+  --clr--very-dark-cyan: hsl(179, 100%, 13%);
+
+  /* Neutral Color */
+  --clr--transparent-white: hsla(0, 0%, 100%, 0.75);
+  --clr--very-light-gray: hsl(0, 0%, 95%);
+
+  /* Font-Size */
+  --fs--base: 15px;
+
+  /* Font-Size */
+  --fm--primary: "Lexend Deca", sans-serif;
+  --fm--secondary: "Big Shoulders Display", cursive;
+
+  /* Font-Weight */
+  --fw--regular: 400;
+  --fw--bold: 700;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -66,4 +88,31 @@ h6 {
 #root,
 #__next {
   isolation: isolate;
+}
+
+body {
+  background-color: var(--clr--very-light-gray);
+  color: black;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.cars__preview {
+}
+
+.cars__sedan {
+  background-color: var(--clr--bright-orange);
+}
+
+.cars__suvs {
+  background-color: var(--clr--dark-cyan);
+}
+
+.cars__luxury {
+  background-color: var(--clr--very-dark-cyan);
 }
