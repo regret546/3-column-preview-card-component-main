@@ -11,9 +11,9 @@
   /* Font-Size */
   --fs--base: 15px;
 
-  /* Font-Size */
-  --fm--primary: "Lexend Deca", sans-serif;
-  --fm--secondary: "Big Shoulders Display", cursive;
+  /* Font-Family */
+  --ff--primary: "Lexend Deca", sans-serif;
+  --ff--secondary: "Big Shoulders Display", cursive;
 
   /* Font-Weight */
   --fw--regular: 400;
@@ -26,6 +26,8 @@
 *,
 *::before,
 *::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 /*
@@ -92,17 +94,85 @@ h6 {
 
 body {
   background-color: var(--clr--very-light-gray);
-  color: black;
+  color: var(--clr--very-light-gray);
+  font-family: var(--ff--primary);
+  font-size: var(--fs--base);
+  font-weight: var(--fw--regular);
+  letter-spacing: 0.2rem;
 }
 
 .content {
+  margin: 5rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
 }
 
 .cars__preview {
+  margin-inline: 1.5rem;
+  display: grid;
+  grid-template-rows: auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.cars__content {
+  display: grid;
+  gap: 1.3rem;
+}
+
+.cars__name {
+  font-family: var(--ff--secondary);
+  font-weight: var(--fw--bold);
+  font-size: 36px;
+}
+
+.cars__details {
+  line-height: 1.5rem;
+}
+
+.btn__sedan,
+.btn__suvs,
+.btn__luxury {
+  padding: 0.6rem 1.7rem;
+  border-radius: 1.5rem;
+  text-decoration: none;
+  border: none;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  height: 50px;
+}
+
+.btn__sedan {
+  color: var(--clr--bright-orange);
+}
+.btn__sedan:hover {
+  color: var(--clr--very-light-gray);
+  background-color: var(--clr--bright-orange);
+  border: 2px solid var(--clr--very-light-gray);
+}
+
+.btn__suvs {
+  color: var(--clr--dark-cyan);
+}
+.btn__suvs:hover {
+  color: var(--clr--very-light-gray);
+  background-color: var(--clr--dark-cyan);
+  border: 2px solid var(--clr--very-light-gray);
+}
+
+.btn__luxury {
+  color: var(--clr--very-dark-cyan);
+}
+.btn__luxury:hover {
+  color: var(--clr--very-light-gray);
+  background-color: var(--clr--very-dark-cyan);
+  border: 2px solid var(--clr--very-light-gray);
+}
+.cars__sedan,
+.cars__suvs,
+.cars__luxury {
+  padding: 2.5rem;
 }
 
 .cars__sedan {
@@ -115,4 +185,13 @@ body {
 
 .cars__luxury {
   background-color: var(--clr--very-dark-cyan);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: black;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
 }
