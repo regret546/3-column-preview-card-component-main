@@ -98,7 +98,7 @@ body {
   font-family: var(--ff--primary);
   font-size: var(--fs--base);
   font-weight: var(--fw--regular);
-  letter-spacing: 0.2rem;
+  line-height: 0.2rem;
 }
 
 .content {
@@ -116,7 +116,7 @@ body {
   overflow: hidden;
 }
 
-@media (min-width: 650px) {
+@media (min-width: 700px) {
   .content {
     height: 100vh;
     margin: 0;
@@ -134,6 +134,7 @@ body {
   }
 
   .cars__content {
+    height: 300px;
   }
 }
 .cars__content {
