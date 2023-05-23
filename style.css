@@ -116,6 +116,26 @@ body {
   overflow: hidden;
 }
 
+@media (min-width: 650px) {
+  .content {
+    height: 100vh;
+    margin: 0;
+  }
+
+  .cars__preview {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+  }
+
+  .btn__sedan,
+  .btn__suvs,
+  .btn__luxury {
+    margin-top: 5rem !important;
+  }
+
+  .cars__content {
+  }
+}
 .cars__content {
   display: grid;
   gap: 1.3rem;
