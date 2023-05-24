@@ -98,7 +98,7 @@ body {
   font-family: var(--ff--primary);
   font-size: var(--fs--base);
   font-weight: var(--fw--regular);
-  line-height: 0.2rem;
+  letter-spacing: 0.2rem;
 }
 
 .content {
@@ -121,18 +121,15 @@ body {
     height: 100vh;
     margin: 0;
   }
-
   .cars__preview {
     grid-template-columns: repeat(3, 1fr);
     max-width: 1000px;
   }
-
   .btn__sedan,
   .btn__suvs,
   .btn__luxury {
     margin-top: 5rem !important;
   }
-
   .cars__content {
     height: 300px;
   }
